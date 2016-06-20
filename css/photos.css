@@ -1,0 +1,222 @@
+@font-face {font-family: "iconfont";
+  src: url('../font/iconfont.eot'); /* IE9*/
+  src: url('../font/iconfont.eot') format('embedded-opentype'), /* IE6-IE8 */
+  url('../font/iconfont.woff') format('woff'), /* chrome, firefox */
+  url('../font/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../font/iconfont.svg') format('svg'); /* iOS 4.1- */
+}
+
+@font-face{
+	font-family: "segoesc";
+	src:url("../font/segoesc.ttf");
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:80px;
+  font-style:normal;
+  font-weight: lighter;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-chongwu:before { content: "\e678"; }
+.icon-ren:before { content: "\e608"; }
+.icon-yinlekai:before { content: "\e675"; }
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+	background: url(../images/background.png);
+	overflow:hidden;
+}
+
+#header{
+	height:100px;
+	background: #D5CAC3;
+	color:#626262;
+	opacity: 1;
+}
+
+#icon{
+	cursor: default;
+}
+
+/* 主页面区域 */
+#photo_main{
+	position: relative;
+	top:0;
+	width: 100%;
+}
+
+/* 左边栏 */
+#leftSide{
+	width:350px;
+	height: 100%;
+	background: url(../images/desk1.jpg);
+	background-size: cover;
+	position: fixed;
+	overflow: hidden;
+}
+
+#leftSide img{
+	position: absolute;
+	top:0;
+	left:-50px;
+	transition: 1.5s;
+}
+
+/* 左边栏文字区域 */
+#description{
+	position: absolute;
+	top:300px;
+	width:350px;
+	height: 400px;
+	color: #FCE2DC;
+	background-color: rgba(0,0,0,0.2);
+	font-family: segoesc;
+	text-align: center;
+}
+
+#description h1{
+	margin-top: 50px;
+}
+
+#description h2{
+	transition-timing-function:ease-out;
+	transition-duration:1s;
+}
+
+/* 图片展示区 */
+#photo_show{
+	width: 100%;
+	height: 100%;
+	margin-left: 350px;
+}
+
+/*用于图片放置的盒子*/
+.imgBox{
+	width: 800px;
+	height: 400px;
+	position: relative;
+	top:300px;
+	/*left:600px;*/
+	left: 40%;
+	margin-left: -400px;
+	transition-duration: 1s;
+	transform-origin: center center;
+}
+
+/*图片列表*/
+.list{
+	position:relative;
+	left:0;
+	top:0;
+	width:100%;
+	height:400px;
+}
+
+.list li{
+	width: 200px;
+	height: 200px;
+	float: left;
+	list-style: none;
+}
+
+
+.list li img{
+	display:block;
+	box-shadow:2px 2px 3px rgba(0,0,0,0.5);
+	opacity:0.7;
+	filter:alpha(opacity:70);
+	transition: 1s;
+}
+
+/* 换页按钮 */
+#turnPage{
+	position: absolute;
+	width: 39px;
+	height: 80px;
+	top:465px;
+	left:450px;
+	cursor: pointer;
+}
+
+#turnPage img{
+	margin-top: 5px;
+	opacity: 0.7;
+	filter: alpha(opacity:70);
+}
+
+#turnPage img:hover{
+	opacity: 1;
+	filter: alpha(opacity:100);
+	background: white;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+}
+
+/*菜单*/
+#menu{
+	width: 100px;
+	height: 440px;
+	position: absolute;
+	bottom: 20%;
+	right: 100px;
+}
+
+/*菜单图标*/
+.menuIcon{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+/*菜单选项*/
+.choice{
+	background: #51BECA;
+	margin-top: 10px;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	opacity: 0;
+	filter: alpha(opacity:0);
+}
+
+.choice:hover{
+	box-shadow: 0px 0px 10px #7E7E7E;
+}
+
+/*菜单按钮的背景*/
+#bg{
+	background:#6767E9;
+	position: absolute;
+	bottom: 0;
+	transition-property: all;
+	z-index: 1;
+	transition: 0.5s;
+}
+
+/*菜单按钮的线条*/
+#line1 , #line2{
+	width: 60px;
+	height: 10px;
+	border-radius: 1%;
+	background: white;
+	position: absolute;
+	transition: 0.5s;
+}
+#line1{
+	top:33%;
+	left:50%;
+	margin-left: -30px;
+}
+#line2{
+	bottom:33%;
+	left:50%;
+	margin-left: -30px;
+}

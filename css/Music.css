@@ -1,0 +1,517 @@
+@font-face {font-family: 'iconfont';
+    src: url('../font/Music/iconfont.eot'); /* IE9*/
+    src: url('../font/Music/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../font/Music/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../font/Music/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../font/Music/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
+  font-style:normal;
+  font-weight: lighter;
+  transition: 0.1s;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+	font-family:Verdana,Arial, sans-serif;
+}
+
+/* 首部 */
+#header{
+	width:100%;
+  height:62px;
+  background: #F23974;
+	position:fixed;
+	left:0;
+	top:0;
+	font-family:Verdana,Arial, sans-serif;
+	-webkit-transition: 1s;
+	-o-transition: 1s;
+	transition: 1s;
+	color: white;
+	z-index: 2;
+}
+#header #sign{
+	font-size: 20px;
+	margin-left: 170px;
+	padding-left: 20px;
+	color: inherit;
+	cursor: default;
+}
+
+#header ul{
+	float: right;
+	height: 40px;
+	list-style: none;
+	font-size: 22px;
+}
+
+#header ul li{
+	display: inline-block;
+	margin-right:30px;
+	padding-bottom: 5px;
+	text-align: center;
+}
+
+#header ul li:hover{
+	border-bottom: #FFFFFF 8px solid;
+}
+
+a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+
+#icon{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	position: relative;
+	top:50%;
+	margin-top: -25px;
+	left: 110px;
+	background: white url(../images/icon3.png) no-repeat;
+}
+
+/* 播放器区域 */
+#player{
+	position: relative;
+	height: 600px;
+	width: 1000px;
+	margin: 150px auto;
+	background: #9B9B9B;
+}
+
+/* 音量控制区域 */
+#volumeCtrl{
+	position: absolute;
+	top:10px;
+	left: 0px;
+	width: 100%;
+	height: 50px;
+	background: #CE7FFF;
+	border-radius:12px 12px 0 0;
+	box-shadow: 0px 0px 1px #484848;
+	transition-timing-function: ease-out;
+	transition-duration: 0.5s;
+}
+
+/* 音量条 */
+#fullVolume{
+	position: relative;
+	width: 610px;
+	background: #6A6A6A;
+	height: 20px;
+	margin:15px auto;
+	cursor: pointer;
+}
+
+/*音量滑块*/
+#volPicker{
+	position: absolute;
+	left:300px;
+	top:-5px;
+	width: 10px;
+	height: 30px;
+	background: #F23974;
+	cursor: pointer;
+}
+
+/*音量显示*/
+#showVol{
+	position: absolute;
+	width: 50px;
+	height: 20px;
+	left: 300px;
+	top:-1px;
+	font-size: 19px;
+	text-align:right;
+	color: white;
+	display: none;
+}
+
+/*播放列表区域*/
+#playList{
+	position: absolute;
+	height: 100%;
+	width: 200px;
+	right: 0px;
+	background: white;
+	opacity: 1;
+	overflow: hidden;
+	box-shadow: 1px 0px 2px #A9A9A9;
+	font-family:Verdana,Arial, sans-serif;
+	font-size: 20px;
+	transition-timing-function: ease-out;
+	transition-duration: 0.6s;
+}
+/*列表*/
+#playList ul{
+	width: 100%;
+	background: #FFFFFF;
+	height: 600px;
+	transition: 0.5s linear;
+	overflow: hidden;
+	color: #707070;
+}
+
+#playList li{
+	position: relative;
+	color: #707070;
+	list-style-type: none;
+	padding-top: 15px;
+	padding-left:15px;
+	height: 50px;
+	box-shadow:1px 2px 5px -2px grey;
+	transition: 0.5s;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+#playList li p{
+	position: relative;
+	left: 0;
+	transition: 1s;
+	white-space: nowrap;
+}
+/*显示歌曲全名动画*/
+/* @keyframes showAllName{
+	from{left: 0px;}
+	to{left: -110px;}
+}
+ */
+
+#playList li:hover{
+	background:#F3E0FF;
+	color: #7A96F6;
+}
+
+/*播放器主界面*/
+#main{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: white;
+	left:0px;
+	opacity:1;
+	transition-property: all;
+	transition-duration: 1s;
+	box-shadow: 0px 1px 15px #484848;
+	overflow: hidden;
+}
+
+/*歌曲画面区域*/
+#album{
+	position: relative;
+	width: 100%;
+	height: 390px;
+}
+
+/*专辑背景*/
+#background{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/album/Vivalavida-ColdPlay.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-filter: blur(10px);
+	transition: 0.5s;
+}
+/*详情区域*/
+#detail{
+	position: relative;
+	width: 100%;
+	height: 20%;
+}
+
+/*音量入口定位*/
+#vol{
+	float: left;
+	width: 100px;
+	height: 100%;
+}
+
+/*入口类*/
+.extr{
+	position: relative;
+	width: 50px;
+	height: 50px;
+	left:50%;
+	top:50%;
+	margin-top: -25px;
+	margin-left: -25px;
+	cursor: pointer;
+}
+
+.extr .iconfont{
+	font-size: 32px;
+}
+
+/*调音量入口*/
+#volExtr{
+	color: white;
+	padding-top: 8px;
+}
+
+/*播放列表入口定位*/
+#list{
+	float: right;
+	width: 100px;
+	height: 100%;
+}
+
+/*列表入口图标的线*/
+.listLine{
+	position: absolute;
+	width: 40px;
+	height: 6px;
+	background: white;
+	transition:1s;
+}
+
+#listL1{
+	top:50%;
+	margin-top: -3px;
+}
+
+#listL2{
+	top:8px;
+	transform-origin: left center;
+}
+
+#listL3{
+	bottom:8px;
+	transform-origin: left center;
+}
+
+/*显示歌名区域*/
+#songName{
+	color: white;
+	font-size:150%;
+	font-weight: normal;
+	text-align: center;
+	padding-top:20px;
+}
+
+/*专辑旋转图背景（小）*/
+#cover{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	margin-top: -80px;
+	margin-left: -110px;
+	width: 220px;
+	height: 220px;
+	border-radius: 50%;
+	background: rgba(0,0,0,0.3);
+
+}
+
+/*专辑图*/
+#cover img{
+	position: absolute;
+	top:50%;
+	left:50%;
+	width: 160px;
+	height: 160px;
+	margin-top: -80px;
+	margin-left: -80px;
+	border-radius: 80px;
+	background: #676767;
+	overflow: hidden;
+	transition-timing-function: linear;
+	animation: rotate 5s infinite linear;
+	animation-play-state: paused;
+}
+
+/*旋转*/
+@keyframes rotate{
+	from{transform: rotate(0);}
+	to {transform: rotate(1turn);}
+}
+
+/*进度控制区域*/
+#durCtrl{
+	position: relative;
+	width: 100%;
+	height: 20px;
+	background:rgba(255,44,81,0.5);
+	z-index: 1;
+}
+
+/*时间*/
+.time{
+	position: absolute;
+	top:-1px;
+	height: 20px;
+	width: 60px;
+	text-align: center;
+	font-size: 19px;
+	color: white;
+}
+
+/*当前时间*/
+#nowTime{
+	left: 70px;
+}
+
+/*歌曲总时间*/
+#fullTime{
+	right: 70px;
+}
+
+/*进度滑块*/
+#durPicker{
+	position: absolute;
+	left:0px;
+	top:-5px;
+	height: 30px;
+	width: 10px;
+	background: #FF005D;
+	cursor: pointer;
+}
+
+/*显示进度*/
+#showDur{
+	position: absolute;
+	height: 25px;
+	top:-30px;
+	left:0;
+	width: 50px;
+	font-size: 20px;
+	text-align: center;
+	color: white;
+	cursor: default;
+	display: none;
+}
+
+/*在进度条中显示进度*/
+#progress{
+	position: absolute;
+	left: 0;
+	height: 20px;
+	width: 0px;
+	background:-webkit-linear-gradient(left,#39A7FF,#E71F8E);  /* 渐变 */
+	z-index: 0;
+}
+
+/*进度条*/
+#duration{
+	position: relative;
+	width: 610px;
+	background: grey;
+	height: 20px;
+	margin:0 auto;
+	cursor: pointer;
+}
+
+/*播放控制区域*/
+#control{
+	position: relative;
+	width: 100%;
+	height: 190px;
+	background: white;
+}
+
+#play{
+	position: relative;
+	width: 400px;
+	height: 100px;
+	margin:45px auto;
+}
+
+/*控制按钮*/
+#ctrlBtn{
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	margin-left: -50px;
+	width: 100px;
+	height: 100px;
+	background: #F23974;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: 0.1s;
+}
+
+#ctrlBtn:hover{
+	box-shadow: 0px 0px 10px #878787;
+	transition: 1s;
+	transform: rotate(1turn);
+}
+
+/*按钮中的线*/
+.line{
+	position: absolute;
+	width: 10px;
+	height: 50px;
+	border-radius:4px;
+	background: white;
+	transition: 0.5s;
+}
+
+#line1{
+	top:25px;
+	left:30px;
+}
+
+#line2{
+	transform-origin: center center;
+	transform: rotate(-60deg);
+	top:15px;
+	left:50px;
+	opacity: 0.9;
+}
+
+#line3{
+	transform-origin: center center;
+	transform: rotate(60deg);
+	top:35px;
+	left:50px;
+	opacity: 0.6;
+}
+
+/*播放按钮*/
+.playBtn{
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	top:10px;
+	border-radius: 50%;
+	background: white;
+	text-align: center;
+	border:#F23974 5px solid;
+	transition: 0.1s;
+	cursor: pointer;
+  color: #F23974;
+}
+/*前一首按钮*/
+#prev{
+	left:30px;
+}
+/*后一首按钮*/
+#next{
+	right:30px;
+}
+
+::selection{
+	background: none;
+}

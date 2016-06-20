@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Verdana, Arial, sans-serif;
+}
+
+#header {
+  width: 100%;
+  height: 120px;
+  background:#478095;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  color: white;
+  box-shadow: 0px 1px 20px #1A3851;
+}
+/* 标志的样式 */
+#header #sign {
+  font-size: 20px;
+  margin-left: 220px;
+  padding-left: 20px;
+  color: inherit;
+  cursor: default;
+}
+/* 导航栏样式 */
+#header ul {
+  float: right;
+  height: 120px;
+  list-style: none;
+  font-size: 22px;
+}
+
+#header ul li {
+  display: inline-block;
+  margin-right: 30px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+#header ul li:hover {
+  border-bottom: white 3px solid;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* 头像图标 */
+#icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+  top: 50%;
+  margin-top: -50px;
+  left: 110px;
+  background: url(../images/icon1.png) no-repeat;
+}
+
+/* 主界面 */
+#main{
+	position: relative;
+	width:900px;
+	margin:130px auto;
+}
+
+/* 增加留言区 */
+#addComment{
+	width: 100%;
+	height: 330px;
+	background: #82DDC0;
+}
+
+#addComment h1{
+	color: white;
+	background: #F39854;
+	text-align: center;
+	padding:30px;
+}
+
+/*填写新留言的textarea*/
+#newComment{
+	width: 840px;
+	height: 100px;
+	padding:20px;
+	margin: 10px 0px 10px 10px;
+	border: none;
+	border-radius: 20px;
+	resize: none;
+	outline: none;
+	color: #7C7C7C;
+	font-size: 30px;
+}
+
+/* 提交按钮 */
+#subBtn{
+	background: #FF2974;
+	width: 100%;
+	height: 50px;
+	color: white;
+	border:none;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+/* 留言展示区域 */
+#showComment{
+	margin-top:50px;
+	width: 100%;
+}
+
+#showComment ul{
+	list-style: none;
+}
+
+.commentUl{
+  width: 100%;
+  position: relative;
+  list-style: none;
+  border-top: 1px #DDDDDD solid;
+}
+
+.commentLi{
+	position: relative;
+	background-color: #FFFFFF;
+	box-shadow:0px 3px 5px grey;
+	word-break: break-all;
+	padding: 30px;
+	margin-bottom: 5px;
+	color: #939393;
+	max-height: 600px;
+	/*overflow: auto;*/
+	opacity: 0;
+}
+
+#eg{
+	text-align: center;
+	opacity: 1;
+	filter: alpha(opacity:100);
+}
+
+.commentLi p{
+	padding-left: 30px;
+}
+
+time{
+	font-size: 20px;
+	padding-left:0px;
+	color: #243257;
+	border-bottom: 1px #4167CB solid;
+}
+
+.replyBtn{
+	position: relative;
+	left: 50%;
+	width: 100px;
+	height: 30px;
+	background: #455BAA;
+	border:none;
+	color: white;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.replyUl{
+	width: 800px;
+	margin-top: 10px;
+	margin-left: 50px;
+	border-top: 3px #22A0A4 solid;
+}
+
+.reply{
+	position: relative;
+	padding:10px 30px 10px 10px;
+	border-bottom: 2px #B6C5ED solid;
+}
+
+/* .reply p{
+	padding-right: 50px;
+} */
+
+/* 删除按钮 */
+.del{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 30px;
+	height: 30px;
+	border: none;
+	border-radius:50%;
+	font-size: 15px;
+	font-weight: bolder;
+	background: rgba(255,255,255,0.5);
+	color: red;
+	cursor: pointer;
+}
+
+.del:focus,.del:hover{
+	background: red;
+	color: white;
+}
+
+.replyText{
+	position: relative;
+	width: 500px;
+	height: 30px;
+	left: 45%;
+	margin-left: -250px;
+	background: none;
+	outline: none;
+	padding:0px 10px 0px 10px;
+	color: inherit;
+	font-size: 20px;
+}
+
+#showComment li:hover{
+	box-shadow: 0px 5px 30px #9A9A9A;
+}

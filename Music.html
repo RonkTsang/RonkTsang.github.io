@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>My Music</title>
+	<link rel="stylesheet" type="text/css" href="css/Music.css">
+	<script type="text/javascript" src="js/music.js"></script>
+</head>
+<body>
+	<div id="header">
+		<div id="icon"></div>
+		<ul>
+			<li><a href="index.html">HOME</a></li>
+			<li><a href="photos.html">PHOTO</a></li>
+			<li><a href="#">MUSIC</a></li>
+			<li><a href="comment.html">COMMENT</a></li>
+		</ul>
+		<div id="sign">
+			| Ronk Tsang
+		</div>
+	</div>
+	<div id="player">
+
+		<div id="volumeCtrl">
+			<div id="fullVolume">
+				<div id="showVol">50</div>
+				<div id="volPicker"></div>
+			</div>
+		</div>
+
+		<div id="playList">
+			<ul></ul>
+		</div>
+
+		<div id="main">
+			<div id="album">
+				<div id="background"></div>		<!-- 加背景 -->
+				<div id="detail">
+					<div id="vol">
+						<div class="extr" id="volExtr"><i class="iconfont">&#xe691;</i></div>
+					</div>
+					<div id="list">
+						<div class="extr" id="listExtr">
+							<div class="listLine" id="listL1"></div>
+							<div class="listLine" id="listL2"></div>
+							<div class="listLine" id="listL3"></div>
+						</div>
+					</div>
+					<div id="songName"></div>
+				</div>
+				<div id="cover">
+					<img src="images/album/Vivalavida-ColdPlay.jpg">
+				</div>
+			</div>
+
+			<div id="durCtrl">
+				<div id="duration">
+					<div id="progress"></div>
+					<div id="showDur">00:00</div>
+					<div id="durPicker"></div>
+				</div>
+				<div class="time" id="nowTime">00:00</div>
+				<div class="time" id="fullTime">00:00</div>
+			</div>
+
+			<div id="control">
+				<div id="play">
+					<div id="ctrlBtn">
+						<div class="line" id="line1"></div>
+						<div class="line" id="line2"></div>
+						<div class="line" id="line3"></div>
+					</div>
+					<div id="prev" class="playBtn"><i class="iconfont">&#xe61c;</i></div>
+					<div id="next" class="playBtn"><i class="iconfont">&#xe629;</i></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<audio src="song/Red.mp3"
+					title="Red - Taylor Swift"></audio>
+	<audio src="song/ColdPlay.mp3" title="Viva la vida - ColdPlay"></audio>
+	<audio src="song/LoveYourself.mp3" title="Love Yourself - Justin Bieber"></audio>
+</body>
+</html>
