@@ -108,7 +108,9 @@
   </div>
 
   <div data-role="page" id="tt" style="height: 100%">
-    <iframe src="" frameborder="0" width="100%" height="100%"></iframe>
+    <iframe src="https://www.toutiao.com/"
+      sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-pointer-lock"
+      frameborder="0" width="100%" height="100%"></iframe>
   
     <div data-role="footer" class="footer">
       <a href="#pageone" data-transition="flip" id="ttBack">返回首页</a>
@@ -131,17 +133,6 @@
     const i = arr[index];
     i.style.height = height
   }
-
-  var ttUrl = 'https://www.toutiao.com/'
-  var ttIframe = arr[2]
-  document.getElementById('tt').onclick = function () {
-    ttIframe.src = ttUrl
-  }
-
-  document.getElementById('ttBack').onclick = function () {
-    ttIframe.src = ''
-  }
-  
 </script>
 
 </html>
