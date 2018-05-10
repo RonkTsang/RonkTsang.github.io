@@ -17,6 +17,7 @@
       bottom: 0;
       width: 100%;
       text-align: center;
+      z-index: 9999;
     }
 
     #container {
@@ -66,7 +67,7 @@
         </a>
       </div>
       <div class="item">
-        <a class="link" href="#tt" data-transition="flip">
+        <a class="link" href="#tt" data-transition="flip" id="tt">
           <img src="./toutiao.png" alt="">
         </a>
       </div>
@@ -107,10 +108,10 @@
   </div>
 
   <div data-role="page" id="tt" style="height: 100%">
-    <iframe src="https://toutiao.com" frameborder="0" width="100%" height="100%"></iframe>
+    <iframe src="" frameborder="0" width="100%" height="100%"></iframe>
   
     <div data-role="footer" class="footer">
-      <a href="#pageone" data-transition="flip">返回首页</a>
+      <a href="#pageone" data-transition="flip" id="ttBack">返回首页</a>
     </div>
   </div>
 
@@ -130,6 +131,17 @@
     const i = arr[index];
     i.style.height = height
   }
+
+  var ttUrl = 'https://list.jd.com/list.html'
+  var ttIframe = arr[2]
+  document.getElementById('tt').onclick = function () {
+    ttIframe.src = ttUrl
+  }
+
+  document.getElementById('ttBack').onclick = function () {
+    ttIframe.src = ''
+  }
+  
 </script>
 
 </html>
